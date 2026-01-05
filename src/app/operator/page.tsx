@@ -140,6 +140,15 @@ export default function OperatorPage() {
     setError(null);
   };
 
+  const handleUseDevDefaults = () => {
+    setBaseUrl(DEFAULT_BASE_URL);
+    setMemoryBaseUrl(DEFAULT_BASE_URL);
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(GATEWAY_BASE_URL_KEY, DEFAULT_BASE_URL);
+      window.localStorage.setItem(MEMORY_BASE_URL_KEY, DEFAULT_BASE_URL);
+    }
+  };
+
   const handleClearToken = () => {
     window.localStorage.removeItem(GATEWAY_TOKEN_KEY);
     window.localStorage.removeItem(MEMORY_TOKEN_KEY);
@@ -453,6 +462,13 @@ export default function OperatorPage() {
               onChange={(event) => setBaseUrl(event.target.value)}
               placeholder="https://gateway.example.workers.dev"
             />
+            <button
+              className="rounded-full border border-slate-200 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-slate-600 hover:border-slate-300 hover:text-slate-900"
+              onClick={handleUseDevDefaults}
+              type="button"
+            >
+              Use DEV defaults
+            </button>
           </div>
           <div className="space-y-3">
             <label className="block text-xs font-medium uppercase tracking-wide text-slate-500">
