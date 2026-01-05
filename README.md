@@ -19,6 +19,23 @@ Open `http://localhost:3000/operator`.
 - Gateway Token is stored locally in this browser only.
 - Save uses localStorage key `mova_gateway_token`.
 
+## Episodes
+
+The operator console can store and search episodes through the gateway memory
+endpoints:
+
+- POST `/episode/store` to persist the last run request/response + metadata.
+- POST `/episode/search` to list recent invoice episodes.
+
+Tokens and base URLs are stored in localStorage only:
+
+- `mova_gateway_base_url`
+- `mova_gateway_token`
+- `mova_memory_base_url`
+- `mova_memory_token`
+
+Use "Clear tokens" in the UI to remove stored tokens from localStorage.
+
 ## Security note
 
 The gateway token is stored in your local browser storage. Do not use this
