@@ -1,0 +1,8 @@
+{
+  "provider": "sevdesk",
+  "dry_run": true,
+  "idempotency_key": "invoice_period_export_001",
+  "period_start": "2024-01-01",
+  "period_end": "2024-12-31",
+  "export_format": "json"
+}
