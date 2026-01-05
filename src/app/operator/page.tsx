@@ -437,9 +437,17 @@ export default function OperatorPage() {
   return (
     <div className="mx-auto flex min-h-screen w-full max-w-6xl flex-col gap-8 px-6 py-12">
       <header className="space-y-3">
-        <p className="text-xs uppercase tracking-[0.28em] text-amber-800/70">
-          Gateway-only operator tool
-        </p>
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-xs uppercase tracking-[0.28em] text-amber-800/70">
+            Advanced / Operator
+          </span>
+          <a
+            className="text-xs font-semibold uppercase tracking-wide text-slate-600 hover:text-slate-900"
+            href="/app"
+          >
+            Zuruck zur App
+          </a>
+        </div>
         <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">
           MOVA Invoice Operator Console
         </h1>
